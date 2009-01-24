@@ -1,0 +1,966 @@
+/* 
+	Theme Name: Gridlock
+	Theme URI: http://socialuxe.com/labs/gridlock/
+	Description: A grid-based, XHTML-compliant, webzine-style WordPress theme.
+	Version: 1.6
+	Author: Eston Bond
+	Author URI: http://socialuxe.com/
+
+	The theme that ran hyalineskies 6 (September 2005 - August 2006). 
+	Well, sort of. It's had a facelift. A couple of them. A couple of times.
+
+	Thanks to:
+		Mike Davidson, Shaun Inman, Khoi Vinh, Cameron Moll, John Gruber, and Jeffrey Zeldman.
+		I look up to all of you. You guys are my inspiration. (eston, september 2005)
+*/
+
+body {
+    background-color: #999; /* #fafafa; */
+	padding: 0; margin: 0;
+	font-family: Helvetica, Arial, sans-serif;
+	text-decoration: none;
+	display: block;
+	overflow: visible;
+}
+
+#content_wrap {
+	background-image: url(images/whiteback.gif);
+	background-repeat: repeat-y;
+	overflow: hidden; /* trigger haslayout in IE */
+	padding: 0;
+	margin: 0;
+	width: 850px;
+}
+
+#content_wrap.centre {
+	background-image: none;
+	width: 770px;
+	margin: 0 auto;
+}
+
+#centre {
+	background-image: url(images/whiteback_centre.gif);
+	margin: 0 auto;
+	width: 930px;
+	overflow: hidden;
+}
+
+.wrapper {
+	width: auto;
+	margin: 0; padding: 0;
+	overflow: hidden;
+}
+
+/* Block-Level Elements */
+        #ie_warn { 
+                width: 100%;
+                height: 30px;
+                vertical-align: middle;
+                background-color: #DCF5AC;
+                color: #333;
+                border-top: 0px solid #000;
+                border-bottom: 1px solid #333;
+                border-right: 0px solid #000;
+                border-left: 0px solid #000;
+                z-index: 2000;
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 10px; 
+                font-weight: bold;
+                line-height: 30px;
+                padding: 0 0 0 5px;
+                margin: -1px 0 0 0;
+                overflow: auto;
+        }
+
+        #ie_warn a:link, #ie_warn a:visited, #ie_warn a:hover, #ie_warn a:active {
+                color: #186FD0;
+        }
+
+        span.warning {
+               color: #FF0000;
+        }
+
+	#masthead {
+		background-color: #fff;
+    background-image: url(images/masthead_bg.gif);
+    background-repeat: repeat-x;
+		color: #000000;
+		margin: 0px;
+		padding: 0 0 0 5px;
+		width: 765px;
+		height: 90px;
+	}
+	
+	#upper {
+		background-color: #333;
+		background-image: url(images/upper_bg.gif);
+        background-repeat: repeat-x;
+        width: 765px;
+		height: 30px;
+		padding: 0 0 0 5px; margin: 0;
+		border-top: 2px solid #ccc;
+		border-bottom: 1px solid #ccc;
+		vertical-align: middle;
+		display: block;
+		overflow: hidden;
+	}
+	
+	.nav {
+       	background-image: url(images/upper_bg.gif);
+        background-repeat: repeat-x;
+		height: 30px; 
+		width: 108px;
+		padding: 0 0px 0 0;
+		margin: 0;
+		border-right: 1px solid #ccc;
+		font-family: Helvetica, Arial, sans-serif;
+		font-weight: bold;
+		line-height: 30px;
+		font-size: 14px;
+		text-align: left;
+		color: #333;
+		float: left;
+	}
+	
+	.nav_right {
+	  display: block;
+   	background-image: url(images/upper_bg.gif);
+    background-repeat: repeat-x;
+		height: 30px; 
+		width: 30px;
+		padding: 4px 0 0 0;
+		margin: 0;
+		font-family: Helvetica, Arial, sans-serif;
+		font-weight: bold;
+		line-height: 30px;
+		font-size: 14px;
+		text-align: left;
+		color: #333;
+		float: right;
+	}
+
+	
+	.nav_right a:link, .nav_right a:visited, 
+	.nav_right a:active, .nav_right a:hover {
+		border: none; display: block;
+	}
+	
+	.nav_right img#feedicon {
+		width: 22px; height: 22px;
+		display: block;
+	}
+
+	#main_content {
+		width: 532px;
+		margin: 10px 0 0 8px;
+		padding-right: 10px;
+		border-right: 0px solid #666;
+		text-align: left;
+		display: block;
+        overflow: hidden;
+		float: left;
+	}
+
+        #aboutAuthor {
+                width: auto;
+                margin: 0 0 10px 0;
+                padding: 10px 2px 10px 5px;
+                border-bottom: 3px solid #ccc;
+                background-color: #333;
+                font-size: 11px;
+                text-align: left;
+                color: #eee;
+                line-height: 14px;
+        }
+ 
+        .trench {
+                width: 210px; 
+                margin: 0 0 10px 0;
+                padding: 0;
+        }
+	
+	#sidebar {
+		width: 210px;
+		margin: 10px 0px 10px 10px;
+		padding: 0;
+		text-align: left;
+		float: left;
+		display: block;
+        overflow: hidden;
+	}
+	
+	  * html #sidebar {
+	    margin-top: 9px;
+	    width: 200px;
+	  }
+	
+	#minibar {
+		width: 99px;
+		margin: 10px 0 10px 10px;		
+		padding: 0 0 0 10px;
+		border-left: 1px solid #ccc;
+		float: left;
+		text-align: left;
+	}
+	
+	.substory_frame {
+		padding: 0;
+		margin: 0;
+		display: block;
+                overflow: auto;
+	}
+	
+	.substory {
+		/* width: 250px; */
+		display: block;
+		padding: 5px; margin: 0;
+                overflow: hidden;
+	}
+	
+	#left {
+		width: 254px;
+		padding: 0 8px 0 0;
+		float: left;
+    display: block;
+	}
+	
+	#right {
+		width: 255px;
+		padding: 0 0 0 10px;
+                margin: 0 0 0 3px;
+		float: left;
+                display: block;
+	}
+
+	.excerpt {
+		padding: 0; margin: 0 0 20px 0;
+	}
+	
+	.comment_box {
+		width: auto;
+		margin: 0;
+		padding: 10px;
+		border-top: 1px solid #aaa;
+		border-bottom: 1px solid #333;
+		background-color: #eee;
+	}
+	
+	.comment_box_reg {
+		width: auto;
+		margin: 0;
+		padding: 10px;
+		background-color: #fff;
+		border-top: 1px solid #eee;
+		border-bottom: 1px solid #186FD0;
+	}
+
+
+/* Theme Page Stuff */
+
+        .download_graphics {
+               margin: 0; padding: 0;
+               display: inline;
+               text-decoration: none;
+        }
+
+        .download_graphics a:link, 
+        .download_graphics a:hover, 
+        .download_graphics a:visited, 
+        .download_graphics a:active {
+               border: none;
+               text-decoration: none;
+        }      
+        
+
+/* Images */
+	#logo {
+		border: 0; margin: 0;
+		width: 430px;
+		height: 90px;
+		display: block;
+	}
+
+
+/* Typography */
+	h1.hidden {
+		display: none;
+	}
+	
+        .nav a:link, .nav a:visited {
+                text-decoration: none;
+				border: none;
+                color: #eee; 
+				font-weight: normal;
+				font-size: 18px;
+        }
+
+		.nav a:hover, .nav a:active {
+			border: none;
+			color: #186FD0;
+		}
+
+	#main_content p a:link {
+		text-decoration: none;
+		color: #186FD0;
+		border-bottom: 1px solid #7db5f4;
+	}
+
+	
+	#main_content p a:hover {
+		text-decoration: none;
+		color: #186FD0;
+		border-bottom: 1px solid #186FD0;
+	}
+	
+	#main_content p a:visited, #main_content p a:active {
+		text-decoration: none;
+		color: #666;
+		border-bottom: 1px solid #7db5f4;
+	}
+	
+	#headline {
+		font-family: Helvetica, Arial, sans-serif;;
+		font-weight: normal;
+		font-size: 30px;
+		color: #666;
+		padding: 0;
+		margin: 0 0 10px 0;
+		text-align: left;
+        display: block;
+	}
+
+        #headline a:link {
+               font-family: Helvetica, Arial, sans-serif;;
+		font-weight: normal;
+		font-size: 30px;
+		color: #666;
+		padding: 0;
+		margin: 0 0 10px 0;
+		text-align: right;
+                text-decoration: none;
+                border: 0;
+        }
+
+        #headline a:visited {
+               font-family: Helvetica, Arial, sans-serif;;
+		font-weight: normal;
+		font-size: 30px;
+		color: #333;
+		padding: 0;
+		margin: 0 0 10px 0;
+		text-align: right;
+                text-decoration: none;
+                border: 0;
+        }
+
+        #headline a:hover, #headline a:active {
+                font-family: Helvetica, Arial, sans-serif;;
+		font-weight: normal;
+		font-size: 30px;
+		color: #186FD0;
+		padding: 0;
+		margin: 0 0 10px 0;
+		text-align: right;
+                text-decoration: none;
+                border: 0;
+        }
+
+      
+	
+	h3.subhead {
+		font-family: Helvetica, Arial, sans-serif;
+		font-weight: normal;
+		font-size: 12px;
+		color: #186FD0;
+		margin: 0 0 10px 0;
+		padding: 0 0 5px 0;
+		border-bottom: 1px solid #ccc;
+		width: 530px;
+	}
+
+        .substory_head a:link {
+               font-family: Helvetica, Arial, sans-serif;;
+		font-weight: normal;
+		font-size: 18px;
+		color: #666;
+		padding: 0;
+		margin: 0 0 10px 0;
+		text-align: right;
+        text-decoration: none;
+		border: none;
+        }
+
+        .substory_head a:visited {
+               font-family: Helvetica, Arial, sans-serif;;
+		font-weight: normal;
+		font-size: 18px;
+		color: #333;
+		padding: 0;
+		margin: 0 0 10px 0;
+		text-align: right;
+        text-decoration: none;
+        border: none;
+    	}
+
+        .substory_head a:hover, .substory_head a:active {
+                font-family: Helvetica, Arial, sans-serif;;
+		font-weight: normal;
+		font-size: 18px;
+		color: #186FD0;
+		padding: 0;
+		margin: 0 0 10px 0;
+		text-align: right;
+        text-decoration: none;
+		border: none;
+        }
+
+	
+	h3.substory_subhead, #linkblog h3.substory_subhead {
+		font-family: Helvetica, Arial, sans-serif;
+		font-weight: normal;
+		font-size: 12px;
+		color: #186FD0;
+		margin: 0 0 10px 0;
+		padding: 0 0 5px 0;
+		border-bottom: 1px solid #ccc;
+		width: auto;
+	}
+	
+	h3.substory_head {
+		font-family: Helvetica, Arial, sans-serif;;
+		font-weight: normal;
+		font-size: 18px;
+		color: #333;
+		padding: 0;
+		margin: 0 0 10px 0;
+		text-align: left;
+	}
+	
+	#sidebar ul li h2 {
+		font-family: Helvetica, Arial, sans-serif;
+		font-weight: normal;
+		font-size: 12px;
+		color: #333 !important;
+		margin: 0 0 10px 0;
+		padding: 0 0 5px 0;
+		border-bottom: 1px solid #ccc;
+		width: auto;
+	}
+	
+	#sidebar h2.widgettitle {
+		margin: 15px 0 10px 0;
+	}
+	
+	#sidebar ul {
+		padding: 0;
+		margin: 0 0 15px 0;
+	}
+	
+	#sidebar ul li {
+		font-family: Helvetica, Arial, sans-serif;
+		list-style-type: none;
+		font-size: 11px;
+		line-height: 15px;
+		color: #101010;
+	}
+	
+	ul.children {
+		margin-top: 5px;
+		line-height: 15px;
+	}
+	
+	#sidebar ul li ul li {
+		padding-left: 5px;
+	}
+	
+	#sidebar ul li a:link, #sidebar ul li a:visited {
+		font-family: inherit;
+		font-size: inherit;
+		text-decoration: none;
+		color: #186FD0;
+		border-bottom: 1px solid #7db5f4;
+	}
+	
+	#sidebar ul li a:hover, #sidebar ul li a:active {
+		font-family: inherit;
+		font-size: inherit;
+		text-decoration: none;
+		color: #186FD0;
+		border-bottom: 1px solid #186FD0;
+	}
+	
+	#main_content p {
+		font-family: Helvetica, Arial, sans-serif;
+		font-weight: normal;
+		font-size: 12px;
+		margin: 0 0 2em 0;
+		padding: 0;
+		line-height: 18px;
+                color: #101010;
+	}
+	
+	h4.comment {
+		font-family: Helvetica, Arial, sans-serif;
+		font-weight: normal;
+		font-size: 12px;
+		font-style: italic;
+		padding: 0 0 9px 0;
+		line-height: 18px;
+		width: 530px;
+		text-align: right;
+		border-bottom: 2px solid #333;
+                color: #101010;
+	}
+	
+	h4.comment a:link, a:visited {
+		color: #186FD0;
+		border-bottom: 1px solid #7db5f4;
+		text-decoration: none;
+	}
+	
+	h4.comment a:active, a:hover {
+		color: #186FD0;
+		border-bottom: 1px solid #186FD0;
+		text-decoration: none;
+	}
+	
+	
+	h4.substory_comment {
+		font-family: Helvetica, Arial, sans-serif;
+		font-weight: normal;
+		font-size: 11px;
+		font-style: italic;
+		padding: 0 5px 9px 0;
+		line-height: 16px;
+		width: auto;
+		text-align: right;
+        color: #101010;
+	}
+	
+	h4.substory_comment a:link, h4.substory_comment a:visited, h4.linkblog_caption a:link, h4.linkblog_caption a:visited {
+		text-decoration: none;
+		color: #186FD0;
+		border-bottom: 1px solid #7db5f4;
+	}	
+	
+	h4.substory_comment a:active, h4.substory_comment a:hover, h4.linkblog_caption a:active, h4.linkblog_caption a:hover {
+		text-decoration: none;
+		color: #186FD0;
+		border-bottom: 1px solid #186FD0;
+	}
+
+        h4.linkblog_caption {
+                font-family: Helvetica, Arial, sans-serif;
+		font-weight: normal;
+		font-size: 11px;
+		padding: 0; margin: 2px 0 2px 0;
+		line-height: 16px;
+		width: auto;
+		text-align: right;
+        }
+	
+	#left p, #right p {
+		font-family: Helvetica, Arial, sans-serif;
+		font-weight: normal;
+		font-size: 11px;
+		margin: 0 0 1em 0;
+		padding: 0;
+		line-height: 16px; 
+        color: #101010;
+	}
+	
+	h3.comment_title {
+		font-family: Helvetica, Arial, sans-serif;
+		font-weight: normal;
+		font-size: 14px;
+		color: #333;
+		border-top: 1px solid #333;
+		background-color: #ccc;
+		margin: 0; padding: 5px 0 3px 10px;
+		width: auto;
+	}
+	
+		h3.comment_title a:link {
+			font-family: Helvetica, Arial, sans-serif;
+			font-weight: normal;
+			font-size: 14px;
+			color: #333;
+			text-decoration: underline;
+		}
+		
+		h3.comment_title a:visited {
+			font-family: Helvetica, Arial, sans-serif;
+			font-weight: normal;
+			font-size: 14px;
+			color: #333;
+			text-decoration: none;
+		}
+	
+	h3.comment_title_reg {
+		font-family: Helvetica, Arial, sans-serif;
+		font-weight: normal;
+		font-size: 14px;
+		color: #fff;
+		text-indent: 10px;
+		border-top: 1px solid #186FD0;
+		background-color: #fff;
+		margin: 0; padding: 0;
+	}
+
+#aboutAuthor a:link { 
+                color: #eee; 
+                text-decoration: none;
+                border-bottom: 1px solid #efefef;
+}
+
+#aboutAuthor a:hover {
+                color: #186FD0;
+                text-decoration: none;
+                border-bottom: 1px solid #186FD0;
+}
+
+#aboutAuthor a:visited {
+                color: #eee;
+                text-decoration: none;
+                border-bottom: 1px solid #eee;
+} 
+
+#aboutAuthor a:active {
+                color: #186FD0;
+                text-decoration: none;
+                border-bottom: 1px solid #186FD0;
+}
+
+p.trench_intro { padding: 0 0 10px 0; margin: 0; font-size: 11px; 
+                 line-height: 14px; }
+
+       a.no_border {
+                border: 0;
+       }
+	
+/* Form Stuff */
+
+#author, #email, #url, #s {
+		background-color: #eee;
+		font-family: Helvetica, Arial, sans-serif;
+		font-size: 12px;
+		color: #666;
+		border: 1px solid #333;
+		padding: 2px;
+	}
+
+#author:focus, #email:focus, #url:focus, #s:focus {
+		background-color: #fff;
+		font-family: Helvetica, Arial, sans-serif;
+		font-size: 12px;
+		border: 1px solid #000;
+		color: #333;
+		padding: 2px;
+	}
+	
+#comment {
+		background-color: #eee;
+		font-family: Helvetica, Arial, sans-serif;
+		font-size: 12px;
+		color: #666;
+		border: 1px solid #333;
+		padding: 2px;
+		width: 528px;
+}
+
+#comment:focus {
+		background-color: #fff;
+		font-family: Helvetica, Arial, sans-serif;
+		font-size: 12px;
+		border: 1px solid #000;
+		color: #333;
+		padding: 2px;
+		width: 528px;
+}
+
+#submit, #searchsubmit {
+		background-color: #fff;
+		font-family: Helvetica, Arial, sans-serif;
+		font-size: 12px;
+		border: 2px solid #000;
+		color: #333;
+		padding: 2px;
+}
+
+#submit:focus, #submit:hover, #searchsubmit:focus, #searchsubmit:hover {
+		background-color: #fff;
+		font-family: Helvetica, Arial, sans-serif;
+		font-size: 12px;
+		border: 2px solid #186FD0;
+		color: #333;
+		padding: 2px;
+}
+
+	
+/* Images */
+
+	a img, img a, #main_content p img a:link, 
+        #main_content p img a:active, 
+        #main_content p img a:visited, 
+        #main_content p img a:hover {
+		border: none; margin: 0;
+                text-decoration: none;
+	}
+	
+	img.left {
+		float: left;
+		padding: 5px 5px 5px 0;
+	}
+	
+	img.right {
+		float: right;
+		padding: 5px 0 5px 5px;
+	}
+
+        .entry_graphic {
+                display: block;
+                margin: 1em 0 1em 0; padding: 0;
+                border-top: 4px solid #333;
+                border-bottom: 4px solid #333;
+        }
+
+        #about { border-top: 3px solid #ccc; margin: 0; padding: 0; }
+
+        .download_graphic,
+        .download_graphic a:link, .download_graphic a:hover, 
+        .download_graphic a:visited, .download_graphic a:active, 
+        img.download_graphic {
+                display: inline;
+                margin: 10px 5px 10px 0; padding: 2px 0 2px 0;
+                border-top: 2px solid #333;
+                border-bottom: 2px solid #333;
+                width: 210px;
+                text-decoration: none;
+        }
+
+        img a:link, img a:hover, img a:visited, img a:active {
+                border: 0px;
+        }
+	
+	/* TextAmerica Styles */
+	
+	.TAImageBox, .TAImageDiv {
+		padding: 0; margin: 0; border: 0;
+	}
+	
+	a.TAImageLink {
+		border: 0; text-decoration: none;
+	}
+	
+	.TAImage {
+		border: 1px solid #000;
+	}
+
+/* About Page Stuff */
+
+        #about_sidebar {
+                width: 210px;
+                margin: 0 10px 10px 0;
+                padding: 10px 5px 10px 5px;
+                border-top: 3px solid #ccc;
+                border-bottom: 3px solid #ccc;
+                background-color: #333;   
+                color: #eee;     
+                font-size: 10px;        
+                float: left;
+        }
+
+       #about_sidebar img.portrait, #about_sidebar p img.portrait {
+                text-align: center; margin: 0; padding: 0;
+       }
+
+       #about_sidebar p {
+                font-size: 10px;
+                text-align: left;
+                color: #eee;
+                line-height: 14px;
+       }
+
+       * #about_sidebar a:link, * #about_sidebar p a:link { 
+                color: #eee; 
+                text-decoration: none;
+                border-bottom: 1px solid #efefef;
+                font-size: 10px;
+       }
+
+       * #about_sidebar a:hover, * #about_sidebar p a:hover {
+                color: #186FD0;
+                text-decoration: none;
+                border-bottom: 1px solid #186FD0;
+                font-size: 10px;
+       }
+
+       * #about_sidebar a:visited, * #about_sidebar p a:visited {
+                color: #eee;
+                text-decoration: none;
+                border-bottom: 1px solid #eee;
+                font-size: 10px;
+       } 
+
+        * #about_sidebar a:active, * #about_sidebar p a:active {
+                color: #186FD0;
+                text-decoration: none;
+                border-bottom: 1px solid #186FD0;
+                font-size: 10px;
+       }
+
+       #about_sidebar .tiny_head {
+                color: #eee !important;
+                font-weight: normal;
+                font-size: 10px;
+       }
+
+       * .lastfm, * a.lastfm, * .lastfm a {
+               text-align: center;
+               border: 0 !important; margin: 10px 0;
+       }
+
+/* Linkblog */
+
+    /* Linkblog */
+    .delicious-posts {
+	width: auto;
+	padding: 0;
+	margin: 0 0 10px 0;
+	display: block;
+            
+}
+
+	h2.delicious_banner {
+		display: none;
+	}
+	
+	.delicious-posts ul {
+		list-style-type: none;
+		margin: 0; padding: 0;
+		width: auto; display: block;
+	}
+
+    .delicious-post {
+			display: block;
+            width: auto;
+            padding: 5px 0 4px 0;
+            border-bottom: 1px solid #eee;
+            background-color: transparent;
+            list-style-type: none;
+			font: 11px/13px Helvetica, Arial, sans-serif;
+    }
+
+
+	.delicious-tag {
+		display: none;
+	}
+
+    .delicious-link_seplink {
+            display: block;
+            width: auto;
+     }
+
+	p.delicious-extended {
+		font: 11px/13px Helvetica, Arial, sans-serif !important;
+		text-decoration: none;
+		margin: 5px 0 10px 0 !important;
+		display: block;
+	}
+
+	a.delicious-link:link, a.delicious-link:visited {
+		font: 11px/13px Helvetica, Arial, sans-serif;
+		text-decoration: none;
+		color: #186FD0;
+		border-bottom: 1px solid #7db5f4;
+	}
+	
+	a.delicious-link:hover, a.delicious-link:active {
+		font: 11px/13px Helvetica, Arial, sans-serif;
+		text-decoration: none;
+		color: #186FD0;
+		border-bottom: 1px solid #186FD0;
+	}
+	
+	img.tinyfeed { margin-bottom: -3px; width: 12px; height: 12px; } 
+	
+	img.tinyfeed a:link, img.tinyfeed a:active,
+	img.tinyfeed a:hover, img.tinyfeed a:visited,
+	a:link img.tinyfeed, a:hover img.tinyfeed, 
+	a:visited img.tinyfeed, a:active img.tinyfeed,
+	a.linkblog_rss_link:link, a.linkblog_rss_link:visited,
+	a.linkblog_rss_link:active, a.linkblog_rss_link:hover {
+		border: none !important; text-decoration: none;
+	}
+
+	
+/* sIFR */
+
+/* These are standard sIFR styles... do not modify */
+
+.sIFR-flash {
+	visibility: visible !important;
+	margin: 0;
+}
+
+.sIFR-replaced {
+	visibility: visible !important;
+}
+
+span.sIFR-alternate {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 0;
+	height: 0;
+	display: block;
+	overflow: hidden;
+}
+
+
+/* These "decoy" styles are used to hide the browser text before it is replaced... the negative-letter 
+spacing in this case is used to make the browser text metrics match up with the sIFR text metrics since the sIFR 
+text in this example is so much narrower... your own settings may vary... any weird sizing issues you may run 
+into are usually fixed by tweaking these decoy styles */
+
+.sIFR-hasFlash #headline {
+	font-size: 30px;
+	text-align: left;
+}
+
+.sIFR-hasFlash .nav {
+	text-indent: 5px;
+}
+
+.sIFR-hasFlash h3.substory_head {
+	font-size: 18px;
+}
+
+.sIFR-hasFlash #sidebar ul li h2 {
+	font-family: Helvetica, Arial, sans-serif;
+	font-weight: normal;
+	font-size: 12px;
+	color: #186FD0;
+	margin: 0 0 10px 0;
+	padding: 0 0 5px 0;
+}
+
+
+.sIFR-hasFlash #sidebar ul li h2.widgettitle {
+	margin: 15px 0 10px 0;
+}
+
+.sIFR-hasFlash h3.subhead {
+	font-family: Helvetica, Arial, sans-serif;
+	font-weight: normal;
+	font-size: 12px;
+	color: #186FD0;
+	margin: 0 0 10px 0;
+	padding: 0 0 5px 0;
+	border-bottom: 1px solid #ccc;
+	width: auto;
+}
+
+.sIFR-hasFlash #linkblog h3.substory_subhead {
+    font-size: 12px;
+}

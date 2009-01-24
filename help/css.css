@@ -1,0 +1,191 @@
+/* hyalineskies plugin documentation template */
+
+body {
+
+	margin: 0; padding: 0;
+	
+	background-color: #1c1511;
+	color: #f1efee;
+	font: 10px 'Helvetica Neue', Helvetica, 'Calibri', Arial, sans-serif;
+	line-height: normal;
+
+}
+
+#wrap {
+
+	margin: 0 auto; padding: 0;
+	overflow: auto;
+	
+	width: 680px;
+}
+
+#header {
+  margin-top: 3.0em;
+  overflow: hidden;
+}
+
+#content {
+	background-color: #251e1a;
+	margin: 0; padding: 10px;
+}
+
+
+#image_section {
+  border: 1px solid #29221E;
+  background-color: #28211C;
+  padding: 10px;
+}
+
+  #image_section img {
+    display: block;
+    border: 1px solid #342E29;
+    width: 636px;
+    height: 188px;
+  }
+
+
+.section {
+	
+	margin: 2.0em 0; padding: 2.0em 0 1.0em 0;
+	width: auto; 
+	
+	overflow: auto;
+	border-top: 1px solid #302A25;
+	border-bottom: 1px solid #302A25;
+	
+}
+
+.section_head {
+	
+	width: 190px;
+	margin: 0; padding: 0 0 0 10px;
+	float: left;
+	
+}
+
+.section_body {
+	
+	width: 450px;
+	margin: 0; padding: 0 10px 0 0;
+	float: left;
+	
+}
+
+/* Typography */
+
+	h1#logo {
+		
+		width: 170px; height: 35px;
+		background: transparent url(images/socialuxe_logo.gif) top left no-repeat;
+		overflow: hidden; text-indent: -5000px;
+		display: block;
+		float: left;
+		
+	}
+	
+	h2#product_name {
+		
+		margin: 22px 0 0; padding: 0;
+		height: 26px; width: 129px;
+		background: transparent url(images/gridlock.gif) top left no-repeat;
+		overflow: hidden; text-indent: -5000px;
+		display: block;
+		float: right;
+	}
+	
+	h4 {
+		
+		margin: 0; padding: 0;
+		width: 220px;
+		
+		font-weight: lighter;
+		color: #f1efee;
+		font-size: 2.1em;
+		
+	}
+	
+	h4.intro { color: #ADC53A; }
+	
+	#content p {
+		margin: 0 0 2.0em 0;
+		font-size: 1.2em;
+		line-height: 1.6em;
+	}
+	
+	.section_body p {
+		margin: 0 0 2.0em 0;
+		font-size: 1.2em;
+		line-height: 1.6em;
+		text-align: left;
+	}
+	
+	
+	code {
+		
+		color: #ADC53A;
+		font-family: Consolas, Andale Mono, Lucida Console, Courier New, monospace;
+		font-size: inherit;
+		line-height: 1.6em;
+		text-align: left;
+		
+	}
+	
+		span.param { color: #ADC53A; }
+		
+		span.highlight { color: #ADC53A; font-weight: bold; }
+		
+	ul, ol {
+		
+		margin: 0 0 2.0em 0; padding: 0;
+		list-style-type: none;
+	}
+	
+	ul.attributions { list-style-type: square; }
+		
+		ul li, ol li {
+			
+			margin: 0 0 0.5em 1.0em;
+			font-size: 1.2em;
+			line-height: 1.6em;
+			color: #f1efee;
+			
+		}
+		
+		ul li ul li, ul li ol li {
+			font-size: inherit;
+			line-height: inherit;
+			margin: 0 0 0.5em 1.0em;
+			color: #f1efee;
+		}
+		
+		ul li.function { margin: 0 0 1.0em 0; }
+	
+	span.small_head { color: #C4C4C4; font-weight: bold; }
+	span.warning_head {color: #00AEEF; font-weight: bold; }
+	
+	a:link {
+		color: #22E3FF;
+		text-decoration: none;
+	}
+	
+	a:hover, a:active {
+		color: #22E3FF;
+		text-decoration: underline;
+	}
+	
+	a:visited {
+		color: #f1efee;
+		text-decoration: underline;
+	}
+	
+	p#copyright {
+		
+		margin: 1.0em 0;
+		padding: 0; 
+		font-size: 1.1em;
+		color: #77726F;
+		font-weight: normal;
+		line-height: 1.3em;
+		text-align: center;
+		
+	}

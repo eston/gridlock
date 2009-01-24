@@ -1,0 +1,22 @@
+Gridlock Change Log
+
+[13-11-2006] BUGFIX: Fixed <?php bug on line 47 of index.php to reflect <?php instead of shorthand <? (Thanks Bianca)
+[13-11-2006] BUGFIX: Fixed display bug in which mySQL Slashes are not properly stripped.
+[13-11-2006] BUGFIX: Fixed HTML Entity decoding in the About Page Blurb.
+[14-11-2006] BUGFIX: Fixed CSS issue with IE6 warning enabled in Internet Explorer 6 / Windows. (Thanks Guilherme)
+[27-03-2007] BUGFIX: Fixed XHTML Validity issue in index.php (Thanks Florian)
+[27-03-2007] BUGFIX: Fixed XHTML Validity issue in sidebar.php (Thanks Florian)
+[27-03-2007] BUGFIX: Changed gridlock theme directory to gridlock-theme to avoid nasty confusion.
+
+[09-10-2007] REVISION: Updated Gridlock to Version 1.5
+             Changed in this version:
+                - Sidebar now supports WordPress widgets.
+                - Fixed Gridlock's administrative pages to work properly with WordPress 2.3's stupid database schema.
+                - Removed some deprecated wp_list_cats from the theme.
+                
+[09-11-2008] REVISION: Updated Gridlock to Version 1.6
+             Changed in this version:
+                - Updated sIFR to patch problems with links in Internet Explorer 6.
+                - Added new documentation for adding links ot the header.
+                - Changed the design a bit to streamline. Dotted borders are *so* 2005.
+                - This will probably be the last release of this theme.
