@@ -52,7 +52,7 @@
             <li><a href="http://validator.w3.org/check/referer" title="This page validates as XHTML 1.0 Transitional">Valid <abbr title="eXtensible HyperText Markup Language">XHTML</abbr></a></li>
             <li><a href="http://jigsaw.w3.org/css-validator/check/referer">Valid CSS</a></li>
 			<?php if(is_home()) { ?>
-            <li><a href="http://www.contentquality.com/mynewtester/cynthia.exe?Url1=<?php bloginfo('url'); ?>">508</a></li>
+            <li><a href="http://www.contentquality.com/mynewtester/cynthia.exe?Url1=<?php urlencode(bloginfo('url')); ?>">508</a></li>
             <?php } ?>
 			      <li><a href="http://wordpress.org/" title="<?php _e('Powered by WordPress, state-of-the-art semantic personal publishing platform.'); ?>">WordPress</a></li>
 			<?php if(get_option('gridlock_disable_sifr') == 'false') { ?>
